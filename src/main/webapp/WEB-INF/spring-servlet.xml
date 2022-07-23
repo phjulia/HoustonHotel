@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:context="http://www.springframework.org/schema/context"
+xmlns:security="http://www.springframework.org/schema/security"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xmlns:mvc="http://www.springframework.org/schema/mvc"
+    xsi:schemaLocation="
+         http://www.springframework.org/schema/beans
+         http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+         http://www.springframework.org/schema/context
+         http://www.springframework.org/schema/context/spring-context-4.0.xsd
+         http://www.springframework.org/schema/mvc
+         http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
+		http://www.springframework.org/schema/security  
+   		 http://www.springframework.org/schema/security/spring-security.xsd">
+ 
+<context:component-scan base-package="com.pjatk"></context:component-scan>
+
+<mvc:annotation-driven />
+
+<mvc:resources mapping="/static_files/**" location="/static_files/" />
+ 
+<!-- Configuration defining views files -->
+ 
+<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/jsp/"></property>
+        <property name="suffix" value=".jsp"></property>
+</bean>
+
+
+<bean id="roomDAO" class="com.pjatk.dao.RoomDAOImpl"/>
+<bean id="empDAO" class="com.pjatk.dao.EmpDAOImpl"/>
+<bean id="calendarDAO" class="com.pjatk.dao.CalendarDAOImpl"/>
+<bean id="requestDAO" class="com.pjatk.dao.RequestDAOImpl"/>
+<bean id="homeDAO" class="com.pjatk.dao.HomeDAOImpl"/>
+<bean id="emailDAO" class="com.pjatk.dao.EmailDAOImpl"/>
+
+
+
+<bean id="roomService" class="com.pjatk.service.RoomServiceImpl"/>
+<bean id="empService" class="com.pjatk.service.EmpServiceImpl"/>
+<bean id="calendarService" class="com.pjatk.service.CalendarServiceImpl"/>
+<bean id="requestService" class="com.pjatk.service.RequestServiceImpl"/>
+<bean id="homeService" class="com.pjatk.service.HomeServiceImpl"/>
+
+
+
+<bean id="ds" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+<property name="driverClassName"
+value="com.mysql.cj.jdbc.Driver"></property>
+<property name="url" value="jdbc:mysql://oevbjfsfgu4gc2m8:m0xill2jfxbpko1w@bv2rebwf6zzsv341.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/w5wepu0pft0ieovs?useUnicode=true&amp;characterEncoding=UTF-8"></property>
+</bean>
+
+
+<bean id="jt" class="org.springframework.jdbc.core.JdbcTemplate">
+<property name="dataSource" ref="ds"></property></bean>
+
+<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+    <!-- SMTP settings -->
+  <!--  <property name="host" value="smtp.gmail.com" /> -->
+<property name="host" value="smtp.sendgrid.net" />
+    <property name="port" value="587" />
+    <property name="username" value="apikey" />
+    <property name="password" value="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" />
+ 
+    <property name="javaMailProperties">
+        <!-- additional properties specific to JavaMail -->
+        <props>
+            <prop key="mail.transport.protocol">smtp</prop>
+            <prop key="mail.smtp.auth">true</prop>
+            <prop key="mail.smtp.starttls.enable">true</prop>
+        </props>
+    </property>
+</bean>
+<bean id="encoder" 
+  class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder">
+</bean>
+</beans>

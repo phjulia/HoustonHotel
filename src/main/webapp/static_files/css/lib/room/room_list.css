@@ -1,0 +1,232 @@
+.filter label {
+	color: black;
+	font-size: 1.5rem;
+}
+
+.save {
+	/* 	position:absolute;
+	right:20px; */
+	border: 0;
+	line-height: 2.5;
+	padding: 0 20px;
+	font-size: 1rem;
+	text-align: center;
+	color: #fff;
+	text-shadow: 1px 1px 1px #000;
+	border-radius: 10px;
+	background-color: #2e2963;
+	box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6), inset -2px -2px
+		3px rgba(0, 0, 0, .6);
+}
+
+.save:hover {
+	background-color: #4d44a6;
+}
+
+.save:active {
+	box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6), inset 2px 2px
+		3px rgba(0, 0, 0, .6);
+}
+
+table {
+	font-family: arial, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+	margin-top: 20px;
+}
+
+td, th {
+	border: 1px solid #dddddd;
+	text-align: center;
+	padding: 8px;
+}
+
+td input[type="checkbox"] {
+	margin: 0 auto;
+	float: left;
+	width: 100%;
+}
+
+.btn {
+	width: 30px;
+	margin: 5px;
+}
+
+.select-dropdown, .select-dropdown * {
+	margin: 0;
+	padding: 0;
+	position: relative;
+	box-sizing: border-box;
+}
+
+.select-dropdown {
+	min-width: 50px;
+	position: relative;
+	background-color: #E6E6E6;
+	border-radius: 4px;
+}
+
+.select-dropdown select {
+	font-size: 1rem;
+	font-weight: normal;
+	max-width: 100%;
+	padding: 8px 24px 8px 10px;
+	border: none;
+	background-color: transparent;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+.select-dropdown select:active, .select-dropdown select:focus {
+	outline: none;
+	box-shadow: none;
+}
+
+.select-dropdown:after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	right: 8px;
+	width: 0;
+	height: 0;
+	margin-top: -2px;
+	border-top: 5px solid #aaa;
+	border-right: 5px solid transparent;
+	border-left: 5px solid transparent;
+}
+
+div.greyGridTable {
+	border: 2px solid #FFFFFF;
+	width: 100%;
+	text-align: center;
+	border-collapse: collapse;
+}
+
+.divTable.greyGridTable .divTableCell, .divTable.greyGridTable .divTableHead
+	{
+	border: 1px solid #FFFFFF;
+	padding: 3px 4px;
+}
+
+.divTable.greyGridTable .divTableBody .divTableCell {
+	font-size: 20px;
+}
+
+.divTable.greyGridTable .divTableCell:nth-child(even) {
+	background: #EBEBEB;
+}
+
+.divTable.greyGridTable .divTableHeading {
+	background: #FFFFFF;
+	border-bottom: 4px solid #333333;
+}
+
+.divTable.greyGridTable .divTableHeading .divTableHead {
+	font-size: 1.5rem;
+	font-weight: bold;
+	color: #333333;
+	text-align: center;
+	border-left: 2px solid #333333;
+}
+
+.divTable.greyGridTable .divTableHeading .divTableHead:first-child {
+	border-left: none;
+}
+
+.greyGridTable .tableFootStyle {
+	font-size: 14px;
+	font-weight: bold;
+	color: #333333;
+	border-top: 4px solid #333333;
+}
+
+.greyGridTable .tableFootStyle {
+	font-size: 1.5rem;
+}
+/* DivTable.com */
+.divTable {
+	display: table;
+}
+
+.divTableRow {
+	display: table-row;
+}
+
+.divTableHeading {
+	display: table-header-group;
+}
+
+.divTableCell, .divTableHead {
+	display: table-cell;
+}
+
+.divTableHeading {
+	display: table-header-group;
+}
+
+.divTableFoot {
+	display: table-footer-group;
+}
+
+.divTableBody {
+	display: table-row-group;
+}
+
+.sort {
+	font-size: 1.5rem;
+	height: 50px;
+	background-color: #EBEBEB;
+	text-align: center;
+}
+
+.sort a div {
+	color: black;
+	padding-top: 5px;
+}
+
+.sort div:hover {
+	background-color: white;
+}
+
+body {
+	color: black;
+}
+
+.footer div {
+	color: black;
+	font-size: 1.5rem;
+}
+
+.footer span {
+	color: black;
+	font-size: 1.5rem;
+}
+
+.footer a {
+	color: black;
+}
+
+.filter a {
+	margin: auto;
+}
+
+
+@media screen and (max-width: 850px) {
+	.footer div {
+		font-size: 15px;
+	}
+	.footer span, .sort {
+		font-size: 15px;
+	}
+	.sort {
+		font-size: 15px;
+		height: 30px;
+	}
+	.divTable.greyGridTable .divTableBody .divTableCell {
+		font-size: 15px;
+	}
+	.filter label {
+		font-size: 15px;
+	}
+}

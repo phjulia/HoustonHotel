@@ -1,0 +1,159 @@
+@charset "UTF-8";
+
+#contact {
+	padding: 10px 0 10px;
+}
+
+.contact-form {
+	padding-top: 30px;
+}
+
+.contact-text {
+	margin: 45px auto;
+}
+
+.mail-message-area {
+	width: 100%;
+	/*     padding:0 15px; */
+}
+
+.mail-message {
+	width: 100%;
+	background: rgba(255, 255, 255, 0.8) !important;
+	-webkit-transition: all 0.7s;
+	-moz-transition: all 0.7s;
+	transition: all 0.7s;
+	margin: 0 auto;
+	border-radius: 0;
+}
+
+.not-visible-message {
+	height: 0px;
+	opacity: 0;
+}
+
+.visible-message {
+	height: auto;
+	opacity: 1;
+	margin: 25px auto 0;
+}
+
+/* Input Styles */
+.form {
+	width: 100%;
+	padding: 15px;
+	background: #f8f8f8;
+	border: 1px solid rgba(0, 0, 0, 0.075);
+	margin-bottom: 25px;
+	color: #727272 !important;
+	font-size: 13px;
+	-webkit-transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	transition: all 0.4s;
+}
+
+.form:hover {
+	border: 1px solid #F5AD1B;
+}
+
+.form:focus {
+	color: white;
+	outline: none;
+	border: 1px solid #F5AD1B;
+}
+
+.has-error {
+	outline: none;
+	border: 1px solid red;
+}
+
+.textarea {
+	height: 200px;
+	max-height: 200px;
+	max-width: 100%;
+}
+
+/* Generic Button Styles */
+.button {
+	padding: 8px 12px;
+	background: #F5AD1B;
+	display: block;
+	width: 120px;
+	margin: 10px 0 0px 0;
+	border-radius: 3px;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+	text-align: center;
+	font-size: 0.8em;
+	box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.10);
+	-moz-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.10);
+	-webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.10);
+}
+
+.button:hover {
+	background: #F5AD1B;
+	color: white;
+}
+
+/* Send Button Styles */
+.form-btn {
+	width: 180px;
+	display: block;
+	height: auto;
+	padding: 15px;
+	color: #fff;
+	background: #F5AD1B;
+	border: none;
+	border-radius: 3px;
+	outline: none;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+	margin: auto;
+	box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.10);
+	-moz-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.10);
+	-webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.10);
+}
+
+.form-btn:hover {
+	background: black;
+	color: white;
+	border: none;
+}
+
+.form-btn:active {
+	opacity: 0.9;
+}
+
+center {
+	margin-top: 330px;
+}
+
+.card-approval {
+	/*   height:100%; */
+	background: #ffffff;
+	margin: 7.5px 0;
+	padding: 40px;
+	border: 1px solid #e7e7e7;
+	border-radius: 3px;
+	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.email_sent {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 20%;
+}
+.email_sent_text{
+	text-align:center;
+}
+#backButton{
+	padding:5px;
+}
+@media screen and (max-width: 600px) {
+	.card-approval{
+	padding:0px;
+	}
+}

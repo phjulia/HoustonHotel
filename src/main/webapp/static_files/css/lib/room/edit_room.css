@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+
+.modal-content{
+	width:700px;
+}
+input[type="checkbox"]{
+	margin: .4rem;
+}
+.page-title{
+	padding:10px;
+}
+.btn-block{
+	width: 200px;
+}
